@@ -125,7 +125,14 @@ Demonstrates the two-database pattern used at companies like Instagram and Spoti
 ---
 
 ### 🚕 NYC Taxi Analytics
-Batch analytics pipeline on the NYC TLC taxi dataset — one of the most common DE interview datasets.
+Batch analytics platform built on the NYC TLC taxi dataset — same architecture as the 
+e-commerce platform but with a different domain, reinforcing the data warehouse pattern.
+
+- Full folder structure: `etl/`, `snowflake/`, `api/`, `dashboard/`, `tests/`
+- ETL loads NYC taxi trip data into Snowflake, transforms and loads to PostgreSQL
+- FastAPI exposes analytics endpoints, Streamlit dashboard visualizes trip patterns
+- Separate Dockerfiles for API and dashboard, orchestrated via Docker Compose
+- GitHub Actions CI on every push
 
 → [github.com/SharathReddyKottam/nyc-taxi-analytics](https://github.com/SharathReddyKottam/nyc-taxi-analytics)
 
